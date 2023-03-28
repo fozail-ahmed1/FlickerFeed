@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Layout} from "antd";
+import {BrowserRouter,Routes, Route} from "react-router-dom";
+import Home from './components/Home';
+import styles from './styles.js';
+import AppBar from './components/AppBar/AppBar';
+import AuthForm from './components/AuthForm';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const {Footer}   = Layout;
+
+const App = () => {
+    return ( 
+    <BrowserRouter>
+        <Layout style={styles.layout}>
+            <AppBar/>
+            <Routes>
+                <Route path='/' element={<Home/>}/>
+                 <Route path='/authform' element={<AuthForm/>}/>
+            </Routes>
+            <Footer style={styles.footer}>2023 FlickerFeed</Footer>
+        </Layout>
+    </BrowserRouter>
+    )
 }
 
 export default App;
