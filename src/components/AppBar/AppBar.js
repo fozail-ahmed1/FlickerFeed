@@ -7,6 +7,7 @@ import { LOGOUT } from "../../constants/actionTypes";
 import decode from 'jwt-decode';
 import StoryForm from "../StoryForm";
 import styles from './styles';
+import './styler.css';
 
 const {Title} = Typography;
 const {Header} = Layout;
@@ -36,6 +37,7 @@ export default function AppBar() {
         setUser(null);
     }
 
+
   return (
    
     <Header style={styles.header}>
@@ -46,9 +48,8 @@ export default function AppBar() {
         </Link>
         <Link to="/">
             <div style={styles.homeLink}>
-            <Image style={styles.image} width="45" perview="false" src={Logo}></Image>
-                &nbsp;
-            <Title style={styles.title}>FlickerFeed</Title>
+                <img style={styles.image} width="45" src={Logo}></img>
+                <Title className='title' style={{color: "#936950"}}>FlickerFeed</Title>
             </div> 
         </Link>
 

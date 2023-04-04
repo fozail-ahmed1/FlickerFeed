@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Form, Input, Button, Card, Layout, Typography } from "antd";
 import { UserOutlined, LockOutlined, MailOutlined } from "@ant-design/icons";
 import { useDispatch } from 'react-redux';
@@ -43,7 +43,7 @@ function AuthForm() {
                     name="authform"
                     form={form}
                     size="large"
-                    wrapperCol={{ span: 20, offset: 2 }}
+                    wrapperCol={{ span: 50, offset:0 }}
                     onFinish={onSubmit}
                 >
                     {isLogin || (
@@ -97,11 +97,12 @@ function AuthForm() {
                         </Form.Item>
                     )}
                     <Form.Item>
-                        <Button htmlType='submit' typeof='primary'>
+                        <Button htmlType='submit' typeof='primary' block>
                             {isLogin ? "Log In" : "Join" }
                         </Button>
-                        <span style={{ margin: "0 10px 0px 20px" }}>Or</span>
-                        <Button type='link' onClick={switchMode}>
+                        <p></p>
+                        <p style={{ margin: "0 10px 0px 20px", textAlign:"center" }}>Or</p>
+                        <Button type='link' onClick={switchMode} block>
                             {isLogin ? "Register now" : "have an account?"}
                         </Button>
                     </Form.Item>

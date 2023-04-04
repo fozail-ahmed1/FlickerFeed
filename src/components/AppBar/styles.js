@@ -46,6 +46,12 @@ const styles = {
     position: "absolute",
     left: "2%",
     top:"-0.1em",
-  }
+  },
+
+  '@media (max-width: 500px)': {
+    title:{
+      display:'none',
+    }
+  },
   };
   export default styles;

@@ -5,7 +5,14 @@ const styles = {
       justifyContent: "start",
       margin: "6rem",
     },
-    card: { width: "400px" },
+    card: { 
+      width: "auto",
+    },
+    button: {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    }
   };
 
   export default styles;

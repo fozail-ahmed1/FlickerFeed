@@ -1,0 +1,10 @@
+.title {
+    margin-top: 8%;
+    font-family: Montserrat;
+}
+
+@media screen and (max-width:540px) {
+    .title {
+        display: none;
+    }
+}
