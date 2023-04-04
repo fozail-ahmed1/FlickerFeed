@@ -1,4 +1,9 @@
 const styles = {
+    layout:{
+        display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    },
     formTitle : {
         display: "flex",
         justifyContent: "center",
@@ -10,9 +15,11 @@ const styles = {
         margin: "30px 10px",
     },
     button:{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+        width:"60%",
+    },
+    returnBtn:{
+      position:"absolute",
+      left:"6%",
     }
 };
 

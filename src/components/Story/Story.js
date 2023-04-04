@@ -1,15 +1,15 @@
 import React, {useState} from 'react';
 import styles from "./styles";
 import { Card,Tooltip,Typography,Image, Button } from 'antd';
-import { EditOutlined,DeleteTwoTone,HeartTwoTone} from "@ant-design/icons";
+import { DeleteTwoTone,HeartTwoTone, ShareAltOutlined} from "@ant-design/icons";
 import { useDispatch } from 'react-redux';
-import { deleteStory,likeStory } from '../../actions/stories';
+import { deleteStory,likeStory, updateStory } from '../../actions/stories';
 
 import Popup from 'reactjs-popup';
 
 
 import moment from 'moment';
-
+import {useNavigate } from 'react-router-dom';
 
 
 const { Meta} = Card;
@@ -18,8 +18,10 @@ const {Link, Paragraph,Text} =Typography;
 function Story ({ story, setSelectedId }) {
 
   const dispatch = useDispatch();
+  const Navigate = useNavigate();
   const [expand, setExpand] = useState(true);
 
+  const exists=false;
   const user = JSON.parse(localStorage.getItem("profile"));
 
   const like = [
@@ -27,7 +29,7 @@ function Story ({ story, setSelectedId }) {
       <HeartTwoTone twoToneColor="magenta"/>
       &nbsp; {story.likes.length} &nbsp;
     </Button>} position="top center">
-      <div>Want to interact with this post?<a href='/authform'>Login!</a></div>
+      <div style={styles.popup}>Want to interact with this post?<a href='/authform'>Login!</a></div>
     </Popup>
   ];
   
@@ -46,11 +48,14 @@ function Story ({ story, setSelectedId }) {
 
     <Tooltip
     placement='top'
-    title="Edit"
+    title="Share"
     >
-        <EditOutlined onClick={() => {
-          setSelectedId(story._id);
+      <ShareAltOutlined onClick={() => {
+          const url = window.location.href;
+          navigator.clipboard.writeText(url);
+          alert("Link copied to Clipboard!");
         }}/>
+
     </Tooltip>,
 
     <Tooltip
@@ -70,7 +75,7 @@ function Story ({ story, setSelectedId }) {
     user?.result?._id === story?.userId ?
     cardActions :
     user?.result ?
-    cardActions.slice(0, 1)
+    cardActions.slice(0, 2)
     :like
     }>
 

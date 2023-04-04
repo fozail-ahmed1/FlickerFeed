@@ -2,9 +2,12 @@ import React, {useEffect, useState} from "react";
 import { useDispatch } from "react-redux";
 import StoryList from "../StoryList";
 import StoryForm from "../StoryForm";
-import {Layout} from "antd";
+import {Button, Layout} from "antd";
 import styles from "./styles";
 import {getStories} from "../../actions/stories";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const {Sider,Content} = Layout;
 
@@ -15,15 +18,14 @@ const Home = () => {
     useEffect(() => {
         dispatch(getStories());
     }, [dispatch]);
-    return ( 
-            <Layout>
-                <Sider style={styles.sider} width={400}>
-                    <StoryForm selectedId={selectedId} setSelectedId={setSelectedId} />
-                </Sider>
-                <Content style={styles.content}>
-                    <StoryList setSelectedId={setSelectedId} />
-                </Content>
-            </Layout>
+    return (
+    <Layout style={styles.content}>  
+        <Container fluid>
+                <Row>
+                    <Col sm={6}><StoryList setSelectedId={setSelectedId} /></Col>
+                </Row>
+        </Container>
+    </Layout> 
     )
 }
 

@@ -1,11 +1,11 @@
 import React, {useState,useEffect} from 'react';
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate, useLocation,Route, Routes } from "react-router-dom";
 import {Layout,Image, Typography,Button,Avatar} from 'antd';
 import Logo from "../../images/favicon.ico";
 import { useDispatch } from "react-redux";
 import { LOGOUT } from "../../constants/actionTypes";
 import decode from 'jwt-decode';
-
+import StoryForm from "../StoryForm";
 import styles from './styles';
 
 const {Title} = Typography;
@@ -37,8 +37,13 @@ export default function AppBar() {
     }
 
   return (
-    
+   
     <Header style={styles.header}>
+         <Link to="/StoryForm" style={styles.AddPost}>
+            <Button htmlType='button'>
+                Add Post
+            </Button>
+        </Link>
         <Link to="/">
             <div style={styles.homeLink}>
             <Image style={styles.image} width="45" perview="false" src={Logo}></Image>
@@ -46,6 +51,7 @@ export default function AppBar() {
             <Title style={styles.title}>FlickerFeed</Title>
             </div> 
         </Link>
+
         {!user ? (
                 <Link to="/authform">
                     <Button htmlType='button' style={styles.login}>
@@ -53,17 +59,9 @@ export default function AppBar() {
                     </Button>
                 </Link>
             ): (
-                <div style={styles.userInfo}>
-                    <Avatar style={styles.avatar} alt="username" size="large">
-                        {user?.result?.username?.charAt(0)?.toUpperCase()}
-                    </Avatar>
-                    <Title style={styles.title} level={4}>
-                        {user?.result?.username}
-                    </Title>&nbsp;
-                    <Button onClick={logout} htmlType='button'>
-                        Log Out
-                    </Button>
-                </div>
+                <Button onClick={logout} htmlType='button' style={styles.login}>
+                    Log Out
+                </Button>
             )}  
         </Header>
     )

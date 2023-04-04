@@ -5,6 +5,7 @@ import Home from './components/Home';
 import styles from './styles.js';
 import AppBar from './components/AppBar/AppBar';
 import AuthForm from './components/AuthForm';
+import StoryForm from './components/StoryForm';
 
 
 const {Footer}   = Layout;
@@ -17,6 +18,7 @@ const App = () => {
             <Routes>
                 <Route path='/' element={<Home/>}/>
                  <Route path='/authform' element={<AuthForm/>}/>
+                 <Route path="/StoryForm" element={<StoryForm/>}/>
             </Routes>
             <Footer style={styles.footer}>2023 FlickerFeed</Footer>
         </Layout>

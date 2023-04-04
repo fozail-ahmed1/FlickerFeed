@@ -1,18 +1,21 @@
 import React, {useEffect} from 'react';
-import { Card, Form, Input, Typography, Button} from "antd";
+import { Card, Form, Input, Typography, Button, Layout} from "antd";
 import styles from './styles';
 import FileBase64 from 'react-file-base64';
 import { createStory,updateStory } from '../../actions/stories';
 import { useSelector,useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-
+import { HomeOutlined} from "@ant-design/icons";
+import {useNavigate } from 'react-router-dom';
 const {Title} = Typography;
+
 
 
 function StoryForm({selectedId, setSelectedId}) {
 
   const story = useSelector((state) => selectedId ? state.stories.find(story => story._id === selectedId) : null);
   const disptach = useDispatch();
+  const navigate = useNavigate();
   const [form] = Form.useForm();
   
   const user = JSON.parse(localStorage.getItem("profile"));
@@ -32,6 +35,10 @@ function StoryForm({selectedId, setSelectedId}) {
     }
   }, [story,form]);
 
+  const Send = () => {
+    navigate('/');
+  }
+
   const reset = () => {
   form.resetFields();
   setSelectedId(null);
@@ -39,7 +46,8 @@ function StoryForm({selectedId, setSelectedId}) {
 
   if (!user) {
     return (
-      <Card style={styles.formCard}>
+      <Layout style={styles.layout}>
+          <Card style={styles.formCard}>
         <Title level={4}>
           <span style={styles.formTitle}>
             Welcome to FlickerFeed!
@@ -48,77 +56,84 @@ function StoryForm({selectedId, setSelectedId}) {
           <Link to="/authform">register</Link>  for sharing instant moments or ideas.
         </Title>
       </Card>
+      </Layout>
     );
   }
 
 
   return (
-  <Card 
-  style={styles.formCard} 
-  title={
-  <Title
-  level={4} style={styles.formTitle}>
-    {selectedId ? "Editing" : "Share"} a story
-  </Title>}>
+    <Layout style={styles.layout}>
+     
+    <Card 
+    style={styles.formCard} 
+    title={
+    <Title
+    level={4} style={styles.formTitle}
+    >
+       <Link style={styles.returnBtn} to='/'>
+       <HomeOutlined />
+      </Link>
+      {selectedId ? "Editing" : "Share"} a story
+    </Title>}>
 
-    <Form
-    form={form}
-    labelCol={{span: 6}}
-    wrapperCol={{span:16}}
-    layout="horizontal"
-    size="middle"
-    onFinish={onSubmit}>
+      <Form
+      form={form}
+      labelCol={{span: 6}}
+      wrapperCol={{span:16}}
+      layout="horizontal"
+      size="middle"
+      onFinish={onSubmit}>
 
-      <Form.Item name="caption" label="Caption" rules={[{required:true}]}>
+        <Form.Item name="caption" label="Caption" rules={[{required:true}]}>
+          <Input.TextArea allowClear autoSize={{minRows:2, maxRows:6}}/>
+        </Form.Item>
+        <Form.Item name="tags" label="Tags" >
         <Input.TextArea allowClear autoSize={{minRows:2, maxRows:6}}/>
-      </Form.Item>
-      <Form.Item name="tags" label="Tags" >
-      <Input.TextArea allowClear autoSize={{minRows:2, maxRows:6}}/>
-      </Form.Item>
-      <Form.Item name="image" label="Image" rules={[{required:true}]}>
-        <FileBase64
-        type="file"
-        multiple={false}
-        onDone={(e)=>{
-          form.setFieldsValue({
-            image:e.base64
-          })
-        }}
-        />
-      </Form.Item>
-      <Form.Item
-      wrapperCol={{
-        span:16,
-        offset:6
-      }}>
-        <Button
-        type="primary"
-        block
-        htmlType='submit'
-        style={styles.button}>
-          Share
-        </Button>
-      </Form.Item>
+        </Form.Item>
+        <Form.Item name="image" label="Image" rules={[{required:true}]}>
+          <FileBase64
+          type="file"
+          multiple={false}
+          onDone={(e)=>{
+            form.setFieldsValue({
+              image:e.base64
+            })
+          }}
+          />
+        </Form.Item>
+        <Form.Item
+        wrapperCol={{
+          span:16,
+          offset:6
+        }}>
+          <Button
+          type="primary"
+          htmlType='submit'
+          style={styles.button}>
+            Share
+          </Button>
+        </Form.Item>
 
-      {!selectedId ? null :
-      <Form.Item
-      wrapperCol={{
-        span:16,
-        offset:6
-      }}>
-        <Button
-        type="primary"
-        block
-        htmlType='button'
-        danger
-        onClick={reset}
-        style={styles.button}>
-          Discard
-        </Button>
-      </Form.Item>
-      }
-    </Form>
-  </Card>
+        {!selectedId ? null :
+        <Form.Item
+        wrapperCol={{
+          span:16,
+          offset:6
+        }}>
+          <Button
+          type="primary"
+          htmlType='button'
+          danger
+          onClick={reset}
+          style={styles.button}>
+            Discard
+          </Button>
+        </Form.Item>
+        }
+      </Form>
+    </Card>
+  </Layout>
+
   )
 }
 

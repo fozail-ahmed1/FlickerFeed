@@ -42,5 +42,10 @@ const styles = {
     display: "flex",
     alignItems: "center",
   },
+  AddPost: {
+    position: "absolute",
+    left: "2%",
+    top:"-0.1em",
+  }
   };
   export default styles;
