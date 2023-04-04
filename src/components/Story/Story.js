@@ -4,6 +4,7 @@ import { Card,Tooltip,Typography,Image, Button } from 'antd';
 import { DeleteTwoTone,HeartTwoTone, ShareAltOutlined} from "@ant-design/icons";
 import { useDispatch } from 'react-redux';
 import { deleteStory,likeStory, updateStory } from '../../actions/stories';
+import { Link, useNavigate } from 'react-router-dom';
 
 import Popup from 'reactjs-popup';
 
@@ -29,7 +30,7 @@ function Story ({ story, setSelectedId }) {
       <HeartTwoTone twoToneColor="magenta"/>
       &nbsp; {story.likes.length} &nbsp;
     </Button>} position="top center">
-      <div style={styles.popup}>Want to interact with this post?<a href='/authform'>Login!</a></div>
+      <div style={styles.popup}>Want to interact with this post?<Link to='/authform'>Login!</Link></div>
     </Popup>
   ];
   
