@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# FlickerFeed
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+FlickerFeed is a online social media platform for you to share your instant moments or ideas! 
 
-## Available Scripts
+The live website can be accessed at this link: https://flickerfeed.onrender.com/
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+* The website starts with a Splash Screen and then redirected to the home page which consists of a navbar to navigate from one section to another with an aesthetic background and attractive photos.
+* It also consists of different pages like Testimonials, Portfolios of photographers Tarun Khiwal and Sash Jairam.
+* The page also has features to view and download the image as a pdf followed by an additional feature to Book the photographer for the specific date and time when logged in as a user.
+* When an admin logs in, they have an additional feature to add images to their respective portfolios.
+* Along with this we also have Login page to register the user accompanied by the admin login.
+* Responsive slides are also included in this project. This responsive site project is simple and easy to operate by the users on all devices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Preview
+### 1. Homepage
+![HomePage](https://user-images.githubusercontent.com/96954007/192112137-99ef5577-b168-418a-be40-0422326f6e0e.JPG)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2. Testimonials
+![Testimonials](https://user-images.githubusercontent.com/96954007/192112202-6c4bf2fa-9b04-420c-9f53-2c4b4a21be53.JPG)
 
-### `npm test`
+### 3. Register 
+![Register](https://user-images.githubusercontent.com/96954007/192112367-925ec253-ff34-4a81-90e8-e77782b8b758.JPG)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 4. Portfolios
+![Portfolios](https://user-images.githubusercontent.com/96954007/192112499-76d33d88-bab1-4a61-b5b7-2245d9edfedf.JPG)
 
-### `npm run build`
+### 5. Responsive Design suitable for all devices
+<p float="left">
+  &ensp; &ensp; &nbsp;
+  <img src="https://user-images.githubusercontent.com/96954007/192112560-abbf42bc-849e-478e-b542-e8817b8396f6.JPG" width="45%"  />
+  &ensp;
+  <img src="https://user-images.githubusercontent.com/96954007/192112628-e28c2470-8d66-4521-929b-726129d577d0.JPG" width="45%"  /> 
+</p>
+<p float="left">
+  &ensp; &ensp; &nbsp;
+  <img src="https://user-images.githubusercontent.com/96954007/192112704-4d6c2369-3b3b-4fcb-9560-36a0fff6e5cf.JPG" width="45%" />
+  &ensp;
+  <img src="https://user-images.githubusercontent.com/96954007/192112737-77b96f34-fdf6-480c-81ff-b8e19f0f7241.JPG" width="45%" /> 
+</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Want to see all the pages? [Click Here](PreviewImages.md)
+ 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Implementation
+* This simple yet responsive site is designed using the MERN stack.
+* Bootstrap is used to make it more responsive.
+* The frontend is mainly done using ReactJS.
+* The backend is taken care by using ExpressJS, NodeJS and the database implementation is completed using MongoDB (MongoAtlas).
+* The entire website is deployed on render.com and can be visted at this link: https://flickerfeed.onrender.com/ .
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributors
+Both the Client (Frontend) and Server (Backend) in this Full-stack MERN project was written by<br>
+1. <a href="https://www.linkedin.com/in/fozail-ahmed-3297ab236/">Fozail Ahmed </a>
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
