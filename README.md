@@ -1,6 +1,6 @@
 # FlickerFeed
 
-FlickerFeed is a online social media platform for you to share your instant moments or ideas! 
+FlickerFeed is an online social media platform for you to share your instant moments or ideas! 
 
 The live website can be accessed at this link: https://flickerfeed.onrender.com/
 
@@ -16,30 +16,31 @@ The live website can be accessed at this link: https://flickerfeed.onrender.com/
 * This social media site project is fully responsive, simple and easy to operate by the users on all devices.
 
 ## Preview
-### 1. Homepage
-![HomePage](https://user-images.githubusercontent.com/96954007/192112137-99ef5577-b168-418a-be40-0422326f6e0e.JPG)
+### 1. Home Page
+![HomePage](https://user-images.githubusercontent.com/96954007/230046434-cce81ce0-36b4-44b1-bfbf-2dbcf84f0a0c.PNG)
 
-### 2. Testimonials
-![Testimonials](https://user-images.githubusercontent.com/96954007/192112202-6c4bf2fa-9b04-420c-9f53-2c4b4a21be53.JPG)
+### 2. Login Page
+![LoginPage](https://user-images.githubusercontent.com/96954007/230046694-844544d6-5f55-4f9d-b412-a71a22d252a6.PNG)
 
-### 3. Register 
-![Register](https://user-images.githubusercontent.com/96954007/192112367-925ec253-ff34-4a81-90e8-e77782b8b758.JPG)
+### 3. Register Page
+![RegisterPage](https://user-images.githubusercontent.com/96954007/230046729-4de4f5d7-01ea-43f4-b544-5ec2dc5338d8.PNG)
 
-### 4. Portfolios
-![Portfolios](https://user-images.githubusercontent.com/96954007/192112499-76d33d88-bab1-4a61-b5b7-2245d9edfedf.JPG)
+### 4. Add Post while being Logged in
+![AddPostWithLogin](https://user-images.githubusercontent.com/96954007/230046905-d917416d-622e-4010-8019-9f7410a1e133.PNG)
+
 
 ### 5. Responsive Design suitable for all devices
 <p float="left">
   &ensp; &ensp; &nbsp;
-  <img src="https://user-images.githubusercontent.com/96954007/192112560-abbf42bc-849e-478e-b542-e8817b8396f6.JPG" width="45%"  />
+  <img src="https://user-images.githubusercontent.com/96954007/230046963-c18e6390-a597-46d7-a944-e9e4da9a554c.jpg" width="45%"  />
   &ensp;
-  <img src="https://user-images.githubusercontent.com/96954007/192112628-e28c2470-8d66-4521-929b-726129d577d0.JPG" width="45%"  /> 
+  <img src="https://user-images.githubusercontent.com/96954007/230047066-0ee348a7-c4ab-4994-bc8f-2d69aaf23ac8.jpg" width="45%"  /> 
 </p>
 <p float="left">
   &ensp; &ensp; &nbsp;
-  <img src="https://user-images.githubusercontent.com/96954007/192112704-4d6c2369-3b3b-4fcb-9560-36a0fff6e5cf.JPG" width="45%" />
+  <img src="https://user-images.githubusercontent.com/96954007/230047238-ededfb88-5409-45e3-bfd4-7aa9c25b6c18.jpg" width="45%" />
   &ensp;
-  <img src="https://user-images.githubusercontent.com/96954007/192112737-77b96f34-fdf6-480c-81ff-b8e19f0f7241.JPG" width="45%" /> 
+  <img src="https://user-images.githubusercontent.com/96954007/230047416-3d5f946c-6826-4dc9-be3f-e0c6c5775890.jpg" width="45%" /> 
 </p>
 
 ### Want to see all the pages? [Click Here](PreviewImages.md)
