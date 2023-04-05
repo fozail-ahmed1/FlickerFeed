@@ -55,7 +55,7 @@ The live website can be accessed at this link: https://flickerfeed.onrender.com/
 
 ## Contributors
 Both the Client (Frontend) and Server (Backend) in this Full-stack MERN project was written by<br>
-1. <a href="https://www.linkedin.com/in/fozail-ahmed-3297ab236/">Fozail Ahmed </a>
+1. <a href="https://www.linkedin.com/in/fozail-ahmed1/">Fozail Ahmed </a>
 
 
 
