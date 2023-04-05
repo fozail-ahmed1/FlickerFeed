@@ -6,12 +6,14 @@ The live website can be accessed at this link: https://flickerfeed.onrender.com/
 
 ## Features
 
-* The website starts with a Splash Screen and then redirected to the home page which consists of a navbar to navigate from one section to another with an aesthetic background and attractive photos.
-* It also consists of different pages like Testimonials, Portfolios of photographers Tarun Khiwal and Sash Jairam.
-* The page also has features to view and download the image as a pdf followed by an additional feature to Book the photographer for the specific date and time when logged in as a user.
-* When an admin logs in, they have an additional feature to add images to their respective portfolios.
-* Along with this we also have Login page to register the user accompanied by the admin login.
-* Responsive slides are also included in this project. This responsive site project is simple and easy to operate by the users on all devices.
+* The website starts with the home page of the social media platform which consists of a navbar having the "login" and "add post" option along the sides of the elegant logo of FlickerFeed.
+* It also consists of different pages like Login page, Register page, Add post page, and the homepage which consists of the different posts made by the users of the website.
+* The users of the social media platform will have to login/register to intreact with the post.
+* Once the user is logged in, he can like and share thier own and others pictures.
+* Additional functionalities include editing, deleting and much more, but this can only be done to thier own posts, and not to other user's posts.
+* While adding a new post or editing an existing post, the user can add a caption, tags and images of any format. Once they share it, other users can like and share thier posts.
+* All of these posts/photos are being stored on MongoAtlas cloud.
+* This social media site project is fully responsive, simple and easy to operate by the users on all devices.
 
 ## Preview
 ### 1. Homepage
